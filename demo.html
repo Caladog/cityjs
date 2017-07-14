@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>级联城市</title>
+<script src="city/jQuery.min.js"></script>
+<script src="city/city.min.js"></script>
+<link href="city/city.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<input type="text" class="myArea" id="m1" style="width: 300px; height: 32px" placeholder="请选择所在地区"/>
+<script>$('.myArea').myArea();</script>
+
+
+
+
+<div style='margin-top:200px; line-height:30px;'>
+组件说明：<br />
+-------------------------------------------------------------------------------------------------------<br />
+代码示例 &lt;input type=&quot;text&quot; class=&quot;myArea&quot; id=&quot;youId&quot;/&gt;<br />
+class 必须是 myArea<br />
+id 自定义，多处使用不能重复<br />
+获取地区代码使用 &lt;youId&gt;_code<br />
+<br />
+测试：<button id="test">获取代码</button>
+</div>
+<script>
+$('#test').click(function(){
+	var html="您选择的地区："+$("#m1").val()+"\n\n       地区代码："+$("#m1_code").val();
+	alert(html);	
+	});
+</script>
+</body>
+</html>
+
+
